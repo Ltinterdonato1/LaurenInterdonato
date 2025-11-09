@@ -9,21 +9,13 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
-  <script src="index.js"></script>
-  <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "hEwvpXiHH0DubP_6K",
-      });
-   })();
-</script>
+ 
+  
+
   
   
 </head>
-
+<script src="index.js"></script>
 <body>
   <section id="landing-page" onmousemove="moveBackground(event)">
     <nav>
@@ -31,33 +23,39 @@
         <img id="personal-logo" src="logo.png" alt="">
       </figure>
       <ul class="nav__link--list">
-        <li class="nav__link" onclick="toggleModal()">
-          <a href="#" class="
-            nav__link--anchor
-            link__hover-effect
-            link__hover-effect--black
-          ">About</a>
-        </li>
+        <!-- ABOUT --->
         <li class="nav__link">
-          <a href="#projects" class="
-            nav__link--anchor
-            link__hover-effect
-            link__hover-effect--black
-          ">Projects</a>
+          <a href="#" 
+            class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            onclick="event.preventDefault(); toggleModal()">
+            About
+          </a>
         </li>
-        <li class="nav__link" onclick="toggleModal()">
-          <a href="#" class="
-            nav__link--anchor
-            link__hover-effect
-            link__hover-effect--black
-          ">Contact</a>
+
+        <!-- PROJECTS -->
+        <li class="nav__link">
+          <a href="#projects" 
+            class="nav__link--anchor link__hover-effect link__hover-effect--black">
+            Projects
+          </a>
         </li>
-        <li class="nav__link click" onclick="toggleContrast()">
-          <a href="" class="
-            nav__link--anchor
-            link__hover-effect
-            link__hover-effect--black
-          "><i class="fa-solid fa-circle-half-stroke"></i></a>
+
+        <!-- CONTACT -->
+        <li class="nav__link">
+          <a href="#" 
+            class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            onclick="event.preventDefault(); toggleModal()">
+            Contact
+          </a>
+        </li>
+
+        <!-- DARK MODE -->
+        <li class="nav__link click">
+          <a href="#" 
+            class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            onclick="event.preventDefault(); toggleContrast()">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+          </a>
         </li>
       </ul>
     </nav>
@@ -318,6 +316,19 @@
       </div>
     </div>
   </footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "hEwvpXiHH0DubP_6K",
+        });
+    })();
+  </script>
+
 </body>
 
 </html>
+
+
+
